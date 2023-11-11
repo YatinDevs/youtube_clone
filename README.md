@@ -68,3 +68,50 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+###########################################################################
+
+# Project Setup :
+
+# npx create-react-app ./
+
+# [1] libraries :
+- npm i @tailwindcss/line-clamp axios js-abbreviation-number react-player moment
+
+# [2] tailwind configure :
+
+https://tailwindcss.com/
+
+- [1] install tailwind css with vite
+  https://tailwindcss.com/docs/guides/vite
+
+- [2]
+- npm install -D tailwindcss postcss autoprefixer
+- npx tailwindcss init -p
+
+- [3]Configure your template paths
+
+/** @type {import('tailwindcss').Config} \*/
+export default {
+content: [
+"./index.html",
+"./src/**/\*.{js,ts,jsx,tsx}",
+],
+theme: {
+extend: {},
+},
+plugins: [],
+}
+
+- searches into index.html and src files our css tailwind config
+
+- [4]Add the Tailwind directives to your CSS
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+- [5] Start your build process
+
+  - npm run dev
+
